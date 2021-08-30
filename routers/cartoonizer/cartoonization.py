@@ -1,4 +1,4 @@
-from config.config import Configuration
+# from config.config import Configuration
 from typing import Optional, List
 from fastapi import FastAPI, Query, APIRouter, status
 from pydantic import BaseModel, DirectoryPath
@@ -7,16 +7,15 @@ import uvicorn
 import base64
 from io import BytesIO
 from PIL import Image
-
+from utils.helpers import clearFolderContents
 from mlmodels import Cartoonizer
 from datamodels import MessageModel, CartoonizerRequest, CartoonizerResponse
-
+from config.config import HOME_DIR
 router = APIRouter(tags = ["Cartoonization using Cartoon-GAN by Filip Anderson"])
 
-HOME_DIR = "."
-pretrained_dir = "../cartoonganapi/project/checkpoints/trained_netG.pth"
-cartoonizermodel = Cartoonizer.Cartoonizer(pretrained_dir)
-# textsummarizermodel = TextSummarizer.TextSummarizer(model_directory)
+clearFolderContents(HOME_DIR)
+pretrained_dir = "./checkpoints/trained_netG.pth"
+cartoonizermodel = Cartoonizer(pretrained_dir)
 
 @router.post("/cartoonization", response_model=CartoonizerResponse, summary="Cartoonize image using Cartoon-GAN",status_code=status.HTTP_200_OK, responses={404: {"model": MessageModel}})
 def cartoonize(cartoonizerrequest: CartoonizerRequest):
