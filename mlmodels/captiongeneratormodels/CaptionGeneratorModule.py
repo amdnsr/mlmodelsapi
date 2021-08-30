@@ -6,7 +6,6 @@ from tensorflow.keras.models import load_model
 from pickle import load
 import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
 import argparse
 
 class CaptionGenerator:

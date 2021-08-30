@@ -1,9 +1,11 @@
 import torch
-from utils.transforms import get_no_aug_transform
+from utils.cartoonizerutils.transforms import get_no_aug_transform
+# from utils.transforms import get_no_aug_transform
 import mimetypes
 from PIL import Image
 import torchvision.transforms.functional as TF
-from models.generator import Generator
+from mlmodels.cartoonizermodels.generator import Generator
+# from models.generator import Generator
 import numpy as np
 
 class Cartoonizer:
