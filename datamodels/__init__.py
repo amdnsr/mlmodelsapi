@@ -1,4 +1,4 @@
-from .CaptionGeneratorModels import *
-from .CartoonizerModels import *
-from .MessageModels import *
-from .TextSummarizerModels import *
+from .CaptionGeneratorModels import CaptionGeneratorRequest, CaptionGeneratorResponse
+from .CartoonizerModels import CartoonizerRequest, CartoonizerResponse
+from .MessageModels import MessageModel
+from .TextSummarizerModels import TextSummarizerRequest, TextSummarizerResponse
