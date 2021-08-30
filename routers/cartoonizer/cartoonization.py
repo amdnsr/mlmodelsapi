@@ -11,7 +11,7 @@ from PIL import Image
 from mlmodels import Cartoonizer
 from datamodels import MessageModel, CartoonizerRequest, CartoonizerResponse
 
-router = APIRouter(tags = ["Text Summarization using Facebook BART"])
+router = APIRouter(tags = ["Cartoonization using Cartoon-GAN by Filip Anderson"])
 
 HOME_DIR = "."
 pretrained_dir = "../cartoonganapi/project/checkpoints/trained_netG.pth"
@@ -68,7 +68,7 @@ def cartoonize(cartoonizerrequest: CartoonizerRequest):
 
     # create the response model object from the dictionary
     cartoonizerresponse = CartoonizerResponse(**cartoonized_dict)
-    
+
     return cartoonizerresponse
 
 
