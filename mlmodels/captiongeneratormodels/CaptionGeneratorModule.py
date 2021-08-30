@@ -70,8 +70,8 @@ if __name__ == "__main__":
     img_path = "./users/default/jobs/1/input/boat.png"
 
     max_length = 32
-    tokenizer = load(open("tokenizer.p","rb"))
-    model = load_model('checkpoints/model_9.h5')
+    tokenizer = load(open("assets/captiongenerator/tokenizer.p","rb"))
+    model = load_model('checkpoints/captiongenerator/model_9.h5')
     xception_model = Xception(include_top=False, pooling="avg")
 
 

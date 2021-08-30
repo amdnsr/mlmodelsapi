@@ -14,7 +14,7 @@ from config.config import HOME_DIR
 router = APIRouter(tags = ["Cartoonization using Cartoon-GAN by Filip Anderson"])
 
 clearFolderContents(HOME_DIR)
-pretrained_dir = "./checkpoints/trained_netG.pth"
+pretrained_dir = "./checkpoints/cartoonizer/trained_netG.pth"
 cartoonizermodel = Cartoonizer(pretrained_dir)
 
 @router.post("/cartoonization", response_model=CartoonizerResponse, summary="Cartoonize image using Cartoon-GAN",status_code=status.HTTP_200_OK, responses={404: {"model": MessageModel}})

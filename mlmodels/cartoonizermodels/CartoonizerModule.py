@@ -9,7 +9,7 @@ from mlmodels.cartoonizermodels.generator import Generator
 import numpy as np
 
 class Cartoonizer:
-    def __init__(self, pretrained_dir="./checkpoints/trained_netG.pth", user_stated_device="cpu", batch_size=4):
+    def __init__(self, pretrained_dir="./checkpoints/cartoonizer/trained_netG.pth", user_stated_device="cpu", batch_size=4):
         self.pretrained_dir = pretrained_dir
         self.user_stated_device = user_stated_device
         self.batch_size = batch_size
