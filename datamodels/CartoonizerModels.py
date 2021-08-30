@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 class CartoonizerRequest(BaseModel):
-    image: str
+    imageb64: str
 
 class CartoonizerResponse(BaseModel):
-    cartoonized_image: str
+    cartoonized_imageb64: str

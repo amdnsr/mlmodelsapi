@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 class CaptionGeneratorRequest(BaseModel):
-    image: str
+    imageb64: str
 
 class CaptionGeneratorResponse(BaseModel):
     caption: str
