@@ -1,1 +1,1 @@
-from .config import *
+from .config import Configuration, HOME_DIR
