@@ -57,7 +57,7 @@ class TextSummarizer:
         # return p1 + "/" + p2
 
     def get_summary(self, text):
-        summary_list = self.bart_summarization_pipeline(text, max_length=150)
+        summary_list = self.bart_summarization_pipeline(text, max_length=500)
         summary = summary_list[0]['summary_text']
         return summary
 

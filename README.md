@@ -8,13 +8,13 @@ This project is built using `fastapi`
 To run the service, create a virtual environment and run:
 
 ```setup
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ## Usage
 
 
 ```usage
-    python main.py
+python main.py
 ```
 
 ## API Endpoints

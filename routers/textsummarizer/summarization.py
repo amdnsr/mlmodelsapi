@@ -10,9 +10,9 @@ from datamodels import MessageModel, TextSummarizerRequest, TextSummarizerRespon
 
 router = APIRouter(tags = ["Text Summarization using Facebook BART"])
 
-model_directory = "./my_model_directory"
+model_directory = "./checkpoints/textsummarizer/my_model_directory"
 textsummarizermodel = None
-# textsummarizermodel = TextSummarizer(model_directory)
+textsummarizermodel = TextSummarizer(model_directory)
 
 @router.post("/textsummarization", response_model=TextSummarizerResponse, summary="Summary of the text using Facebook BART",status_code=status.HTTP_200_OK, responses={404: {"model": MessageModel}})
 def summarize(textsummarizerrequest: TextSummarizerRequest):

@@ -2,3 +2,4 @@ mlserviceapienv
 *.pyc
 .vscode
 HOME_DIR
+pytorch_model.bin

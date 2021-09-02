@@ -8,4 +8,4 @@ class Configuration:
     def _load_config(self):
         self.config_json = json.load(self.config_file_path)
 
-HOME_DIR = "../HOME_DIR"
+HOME_DIR = "./HOME_DIR"
